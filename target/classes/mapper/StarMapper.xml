@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.amazon.mapper.StarMapper">
+  <resultMap id="BaseResultMap" type="com.smile.amazon.model.Star">
+    <id column="star_id" jdbcType="INTEGER" property="starId" />
+    <result column="book_id" jdbcType="INTEGER" property="bookId" />
+    <result column="star_one_num" jdbcType="SMALLINT" property="starOneNum" />
+    <result column="star_two_num" jdbcType="SMALLINT" property="starTwoNum" />
+    <result column="star_three_num" jdbcType="SMALLINT" property="starThreeNum" />
+    <result column="star_four_num" jdbcType="SMALLINT" property="starFourNum" />
+    <result column="star_five_num" jdbcType="SMALLINT" property="starFiveNum" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    star_id, book_id, star_one_num, star_two_num, star_three_num, star_four_num, star_five_num
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from star
+    where star_id = #{starId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from star
+    where star_id = #{starId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.smile.amazon.model.Star">
+    insert into star (star_id, book_id, star_one_num, 
+      star_two_num, star_three_num, star_four_num, 
+      star_five_num)
+    values (#{starId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, #{starOneNum,jdbcType=SMALLINT}, 
+      #{starTwoNum,jdbcType=SMALLINT}, #{starThreeNum,jdbcType=SMALLINT}, #{starFourNum,jdbcType=SMALLINT}, 
+      #{starFiveNum,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.smile.amazon.model.Star">
+    insert into star
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="starId != null">
+        star_id,
+      </if>
+      <if test="bookId != null">
+        book_id,
+      </if>
+      <if test="starOneNum != null">
+        star_one_num,
+      </if>
+      <if test="starTwoNum != null">
+        star_two_num,
+      </if>
+      <if test="starThreeNum != null">
+        star_three_num,
+      </if>
+      <if test="starFourNum != null">
+        star_four_num,
+      </if>
+      <if test="starFiveNum != null">
+        star_five_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="starId != null">
+        #{starId,jdbcType=INTEGER},
+      </if>
+      <if test="bookId != null">
+        #{bookId,jdbcType=INTEGER},
+      </if>
+      <if test="starOneNum != null">
+        #{starOneNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starTwoNum != null">
+        #{starTwoNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starThreeNum != null">
+        #{starThreeNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starFourNum != null">
+        #{starFourNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starFiveNum != null">
+        #{starFiveNum,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.smile.amazon.model.Star">
+    update star
+    <set>
+      <if test="bookId != null">
+        book_id = #{bookId,jdbcType=INTEGER},
+      </if>
+      <if test="starOneNum != null">
+        star_one_num = #{starOneNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starTwoNum != null">
+        star_two_num = #{starTwoNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starThreeNum != null">
+        star_three_num = #{starThreeNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starFourNum != null">
+        star_four_num = #{starFourNum,jdbcType=SMALLINT},
+      </if>
+      <if test="starFiveNum != null">
+        star_five_num = #{starFiveNum,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where star_id = #{starId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.smile.amazon.model.Star">
+    update star
+    set book_id = #{bookId,jdbcType=INTEGER},
+      star_one_num = #{starOneNum,jdbcType=SMALLINT},
+      star_two_num = #{starTwoNum,jdbcType=SMALLINT},
+      star_three_num = #{starThreeNum,jdbcType=SMALLINT},
+      star_four_num = #{starFourNum,jdbcType=SMALLINT},
+      star_five_num = #{starFiveNum,jdbcType=SMALLINT}
+    where star_id = #{starId,jdbcType=INTEGER}
+  </update>
+</mapper>

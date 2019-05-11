@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <properties resource="config/db.properties"></properties>
+
+    <!-- 指定数据库驱动的jdbc驱动jar包的位置 -->
+    <classPathEntry location="${jdbc.driverLocation}" />
+
+    <context id="testTable" targetRuntime="MyBatis3">
+
+        <!-- 使得生成的pojo类自动实现serializable接口 -->
+        <!--<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>-->
+
+        <!-- 生成一对一配置 -->
+        <!--<plugin type="cc.bandaotixi.plugins.OneToOnePlugin"></plugin>-->
+        <!-- 生成一对多配置 -->
+        <!--<plugin type="cc.bandaotixi.plugins.OneToManyPlugin"></plugin>-->
+
+        <!-- 批量插入和批量更新 -->
+        <!--<plugin type="cc.bandaotixi.plugins.BatchInsertPlugin"></plugin>
+        <plugin type="cc.bandaotixi.plugins.BatchUpdatePlugin"></plugin>-->
+
+
+        <!--optional,旨在创建class时，对注释进行控制-->
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${jdbc.driverClassName}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.username}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+           NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+
+        <javaModelGenerator targetPackage="com.smile.amazon.generator.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.smile.amazon.generator.mapper"  targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.smile.amazon.generator.mapper"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <table tableName="book" domainObjectName="Book"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <columnOverride column="comment_conten" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+            <!--<columnOverride column="review_title" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="review_content" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>-->
+            
+            <!--<generatedKey column="book_id" sqlStatement="Mysql" identity="true"/>
+            <oneToOne mappingTable="star" column="star_id" joinColumn="star_id" />-->
+        </table>
+
+       <!-- <table tableName="star" domainObjectName="Star"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>-->
+
+
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.amazon.mapper.BookMapper">
+  <resultMap id="BaseResultMap" type="com.smile.amazon.model.Book">
+    <id column="book_id" jdbcType="INTEGER" property="bookId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="cover_image" jdbcType="VARCHAR" property="coverImage" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="publish" jdbcType="VARCHAR" property="publish" />
+    <result column="publish_time" jdbcType="DATE" property="publishTime" />
+    <result column="translator" jdbcType="VARCHAR" property="translator" />
+    <result column="ISBN" jdbcType="CHAR" property="isbn" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="content_validity" jdbcType="VARCHAR" property="contentValidity" />
+    <result column="author_validity" jdbcType="VARCHAR" property="authorValidity" />
+  </resultMap>
+  <resultMap id="BookDtailResultMap" type="com.smile.amazon.dto.BookDetailDTO" extends="BaseResultMap">
+    <association property="star" resultMap="com.smile.amazon.mapper.StarMapper.BaseResultMap"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    book_id, name, author, cover_image, type, publish, publish_time, translator, ISBN, 
+    price, content_validity, author_validity
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.smile.amazon.model.Book">
+    insert into book (book_id, name, author, 
+      cover_image, type, publish, 
+      publish_time, translator, ISBN, 
+      price, content_validity, author_validity
+      )
+    values (#{bookId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{coverImage,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{publish,jdbcType=VARCHAR}, 
+      #{publishTime,jdbcType=DATE}, #{translator,jdbcType=VARCHAR}, #{isbn,jdbcType=CHAR}, 
+      #{price,jdbcType=DOUBLE}, #{contentValidity,jdbcType=VARCHAR}, #{authorValidity,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.smile.amazon.model.Book">
+    insert into book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="bookId != null">
+        book_id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="coverImage != null">
+        cover_image,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="publish != null">
+        publish,
+      </if>
+      <if test="publishTime != null">
+        publish_time,
+      </if>
+      <if test="translator != null">
+        translator,
+      </if>
+      <if test="isbn != null">
+        ISBN,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="contentValidity != null">
+        content_validity,
+      </if>
+      <if test="authorValidity != null">
+        author_validity,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="bookId != null">
+        #{bookId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="coverImage != null">
+        #{coverImage,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="publish != null">
+        #{publish,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null">
+        #{publishTime,jdbcType=DATE},
+      </if>
+      <if test="translator != null">
+        #{translator,jdbcType=VARCHAR},
+      </if>
+      <if test="isbn != null">
+        #{isbn,jdbcType=CHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="contentValidity != null">
+        #{contentValidity,jdbcType=VARCHAR},
+      </if>
+      <if test="authorValidity != null">
+        #{authorValidity,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.smile.amazon.model.Book">
+    update book
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="coverImage != null">
+        cover_image = #{coverImage,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="publish != null">
+        publish = #{publish,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null">
+        publish_time = #{publishTime,jdbcType=DATE},
+      </if>
+      <if test="translator != null">
+        translator = #{translator,jdbcType=VARCHAR},
+      </if>
+      <if test="isbn != null">
+        ISBN = #{isbn,jdbcType=CHAR},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="contentValidity != null">
+        content_validity = #{contentValidity,jdbcType=VARCHAR},
+      </if>
+      <if test="authorValidity != null">
+        author_validity = #{authorValidity,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.smile.amazon.model.Book">
+    update book
+    set name = #{name,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      cover_image = #{coverImage,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      publish = #{publish,jdbcType=VARCHAR},
+      publish_time = #{publishTime,jdbcType=DATE},
+      translator = #{translator,jdbcType=VARCHAR},
+      ISBN = #{isbn,jdbcType=CHAR},
+      price = #{price,jdbcType=DOUBLE},
+      content_validity = #{contentValidity,jdbcType=VARCHAR},
+      author_validity = #{authorValidity,jdbcType=VARCHAR}
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+
+  <select id="bookList" resultMap="BaseResultMap">
+    select * from book
+  </select>
+  <select id="bookDetailDTO" parameterType="java.lang.Integer" resultMap="BookDtailResultMap">
+    select *
+    from book,star
+    where book.book_id=#{bookId} and book.book_id=star.star_id
+  </select>
+</mapper>
