@@ -2,13 +2,12 @@ package com.smile.amazon.controller;
 
 
 import com.smile.amazon.dto.BookDetailDTO;
+import com.smile.amazon.dto.BookReviewDTO;
 import com.smile.amazon.model.Book;
 import com.smile.amazon.model.Comment;
 import com.smile.amazon.model.Message;
 import com.smile.amazon.model.Review;
-import com.smile.amazon.modelExpansion.CommentExpansion;
 import com.smile.amazon.service.BookService;
-import com.smile.amazon.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,12 +28,11 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private CommentService commentService;
 
     @Autowired
     private Message message;
 
+    //首页展示书籍
     @RequestMapping(value = "book_list")
     public String book_list(Model model){
         List<Book> bookList = bookService.bookList();
@@ -43,6 +41,7 @@ public class BookController {
 
     }
 
+    //图书详情页面
     @RequestMapping(value = "book_detail/{bookId}")
     public String book_detail(@PathVariable Integer bookId, Model model){
         BookDetailDTO bookDetail = bookService.bookDetail(bookId);
@@ -50,17 +49,25 @@ public class BookController {
         return "/index/book_detail";
     }
 
+    //跳转到购物车页面
     @RequestMapping(value = "book_shoppingcart")
     public String book_shoppingcart(){
         return "/index/book_shoppingcart";
     }
 
-    @RequestMapping(value = "book_review/{bookId}")
-    public String book_review(Model model, @PathVariable("bookId") Integer bookId){
-        model.addAttribute("bookId", bookId);
+    //跳转到书评编辑页面
+    @RequestMapping(value = "book_review_edit/{bookId}")
+    public String book_review_edit(Model model, @PathVariable("bookId") Integer bookId){
+        Book book = bookService.selectByPrimaryKey(bookId);
+        model.addAttribute("book", book);
         return "index/book_review_edit";
     }
 
+    //跳转到书评详情页面
+    @RequestMapping(value = "book_review_detail/{reviewId}")
+    public String book_review_detail(@PathVariable("reviewId") Integer reviewId){
+        return "index/book_review_detail";
+    }
 
     // 上传文章图片
     @RequestMapping(value = "uploadArticleImg", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
@@ -78,7 +85,6 @@ public class BookController {
             return null;
         }
     }
-
     public Map<String,String> uploadFile(String path,MultipartFile file, HttpServletRequest request) throws IOException {
         Map<String,String> result=new HashMap<String,String>();
         String fileName = file.getOriginalFilename();
@@ -98,11 +104,19 @@ public class BookController {
         return result;
     }
 
-    @RequestMapping(value = "book_review_save", method = RequestMethod.POST)
-    public String book_review_save(@RequestBody Review review){
-        System.out.println();
-        return "test";
+    //插入书评
+    @RequestMapping(value = "book_review_insert", method = RequestMethod.POST)
+    public @ResponseBody Message book_review_insert(@RequestBody Review review){
+        int ret = bookService.insertReview(review);
+        message.setStatus(ret);
+        if(ret>0){
+            message.setMsg("您的书评提交成功，谢谢您的用心……");
+        }else{
+            message.setMsg("您的书评提交过程出现问题，不好意思……");
+        }
+        return message;
     }
+
 
     @RequestMapping(value = "book_review")
     public String book_review(){
@@ -113,7 +127,7 @@ public class BookController {
     @ResponseBody
     public Message book_comment_insert(@RequestBody Comment comment){
         try {
-            //commentService.insert(comment);
+            bookService.insertComment(comment);
             message.setStatus(1);
             message.setMsg("评论成功！！！");
         } catch (Exception e) {

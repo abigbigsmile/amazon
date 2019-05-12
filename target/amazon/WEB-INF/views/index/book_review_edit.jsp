@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
@@ -10,7 +11,7 @@
     <meta name="referrer" content="always">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"/>
     <base href="http://localhost:8080/amazon/"/>
-    <title>评论 三体</title>
+    <title>评论 ${book.name}</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/forala_editor/froala_editor.css"/>
@@ -70,10 +71,10 @@
                 <div class="review-editor-subject-card">
                   <a href="https://book.douban.com/subject/2567698/" target="_blank">
                     <div class="review-editor-subject-card-cover review-editor-subject-card-cover-book">
-                      <img src="img/s2768378.jpg"></div>
+                      <img src="${book.coverImage}"></div>
                     <div class="review-editor-subject-card-info">
-                      <div class="review-editor-subject-card-title">三体</div>
-                      <div class="review-editor-subject-card-summary">“地球往事”三部曲之一 / 刘慈欣 / 重庆出版社</div></div>
+                      <div class="review-editor-subject-card-title">${book.name}</div>
+                      <div class="review-editor-subject-card-summary">${book.name}/ ${book.author} / ${book.publish}         <fmt:formatDate value="${book.publishTime}" pattern="yyyy-MM-dd"/> </div></div>
                   </a>
                 </div>
 
@@ -86,9 +87,9 @@
 
               <div id="editor">
                     <textarea  id='edit' name="content"  style="margin-top: 30px;"></textarea>
-                <div>
+                <%--<div>
                     <br/><input type="button" onclick="saveArticle()" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
-                </div>
+                </div>--%>
               </div>
             </div>
 
@@ -144,28 +145,28 @@
         function saveArticle(){
             var html=$('#edit').froalaEditor('html.get', true);
             var data = {
-              reviewId:0,
-              bookId:0,
+              bookId:${book.bookId},
               userId:0,
+              reviewTime:new Date(),
               reviewTitle:$("#reviewTitle").val(),
               reviewContent:html
             };
             $.ajax({
-              url: 'http://localhost:8080/amazon/book_review_save',
+              url: 'http://localhost:8080/amazon/book_review_insert',
               type: 'POST',
               contentType:"application/json",
               dataType: 'json',
               data:JSON.stringify(data),
-                success: function(data){
-                    if(data.status==1){
-                        alert("您的书评提交成功！！！")
-                        window.location.href="'http://localhost:8080/amazon/book_review/${bookId}";
+                success: function(ret){
+                    if(ret.status>0){
+                      alert(ret.msg);
+                      window.location.href="book_detail/${bookId}";
                     }else{
                         alert("您的书评提交出现了一丢丢问题……")
                     }
                 },
-                error:function(data) {
-                    console.log(data.msg);
+                error:function(err) {
+                    console.log(err.msg);
                 }
             });
         }

@@ -49,7 +49,8 @@
     <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="datasource"></property>
         <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"></property>
-        <property name="typeAliasesPackage" value="com.smile.amazon.model, com.smile.amazon.mapper, com.smile.amazon.dto"></property>
+        <property name="configLocation" value="classpath:config/mybatis-config.xml"></property>
+        <property name="typeAliasesPackage" value="com.smile.amazon.model, com.smile.amazon.mapper, com.smile.amazon.dto,com.smile.amazon.queryVO"></property>
     </bean>
 
     <!-- 自动扫描mapper接口 -->

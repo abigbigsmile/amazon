@@ -15,9 +15,8 @@
     <result column="content_validity" jdbcType="VARCHAR" property="contentValidity" />
     <result column="author_validity" jdbcType="VARCHAR" property="authorValidity" />
   </resultMap>
-  <resultMap id="BookDtailResultMap" type="com.smile.amazon.dto.BookDetailDTO" extends="BaseResultMap">
-    <association property="star" resultMap="com.smile.amazon.mapper.StarMapper.BaseResultMap"/>
-  </resultMap>
+
+
   <sql id="Base_Column_List">
     book_id, name, author, cover_image, type, publish, publish_time, translator, ISBN, 
     price, content_validity, author_validity
@@ -181,9 +180,52 @@
   <select id="bookList" resultMap="BaseResultMap">
     select * from book
   </select>
-  <select id="bookDetailDTO" parameterType="java.lang.Integer" resultMap="BookDtailResultMap">
+  <select id="bookReviewDTO" parameterType="int" resultMap="BookReviewResultMap">
     select *
-    from book,star
-    where book.book_id=#{bookId} and book.book_id=star.star_id
+    from book
+    where book_id=#{bookId}
   </select>
+  <resultMap id="BookReviewResultMap" type="com.smile.amazon.dto.BookReviewDTO" extends="BaseResultMap">
+    <collection property="reviewQueryList" ofType="reviewQueryVO" column="book_id" select="findReviewQueryVO"/>
+  </resultMap>
+  <select id="findReviewQueryVO" parameterType="int" resultMap="ReviewQueryVOmap">
+    select review.*,user.user_name, user.image
+    from review,user
+    where review.book_id=#{bookId} and review.user_id = user.user_id
+  </select>
+  <resultMap id="ReviewQueryVOmap" type="reviewQueryVO" extends="com.smile.amazon.mapper.ReviewMapper.BaseResultMap">
+    <result property="userName" column="user_name"/>
+    <result property="image" column="image"/>
+  </resultMap>
+
+  <select id="bookDetailDTO" parameterType="java.lang.Integer" resultMap="BookDetailResultMap">
+      SELECT book.*,
+              star.*,
+              (SELECT COUNT(*) FROM COMMENT,USER WHERE comment.book_id=#{bookId} AND comment.user_id=user.user_id) AS comment_count,
+              (SELECT COUNT(*) FROM review,user WHERE review.book_id=#{bookId} AND review.user_id=review.user_id) AS review_count
+      FROM book,star
+      WHERE book.book_id=#{bookId} AND book.book_id = star.book_id
+  </select>
+  <resultMap id="BookDetailResultMap" type="com.smile.amazon.dto.BookDetailDTO" extends="BaseResultMap">
+    <result property="commentCount" column="comment_count"/>
+    <result property="reviewCount" column="review_count"/>
+    <association property="star" resultMap="com.smile.amazon.mapper.StarMapper.BaseResultMap"/>
+    <collection property="commentList" ofType="commentQueryVO" column="book_id" select="findCommentQuery"/>
+    <collection property="reviewList" ofType="ReviewQueryVO" column="book_id" select="findReviewQueryVO"/>
+  </resultMap>
+  <select id="findCommentQuery" parameterType="java.lang.Integer" resultMap="CommentQueryVOmap">
+    select comment.*,user.user_name
+    from comment,user
+    where comment.book_id=#{bookId} and comment.user_id=user.user_id
+  </select>
+  <resultMap id="CommentQueryVOmap" type="com.smile.amazon.queryVO.CommentQueryVO">
+    <id column="comment_id" jdbcType="INTEGER" property="commentId" />
+    <result column="book_id" jdbcType="INTEGER" property="bookId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+    <result column="love" jdbcType="TINYINT" property="love" />
+    <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+  </resultMap>
+
 </mapper>

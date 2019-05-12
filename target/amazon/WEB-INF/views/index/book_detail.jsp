@@ -1,6 +1,7 @@
 <%@page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page isELIgnored="false"%>
 <jsp:useBean id="timer" class="java.util.Date"/>
 <!DOCTYPE html>
@@ -201,6 +202,9 @@
     <span property="v:itemreviewed">${bookDetail.name}</span>
     <div class="clear"></div>
   </h1>
+
+
+
   <div id="content">
     <div class="grid-16-8 clearfix">
       <div class="article">
@@ -311,7 +315,7 @@
                 <a class="" href="https://book.douban.com/annotation/write?sid=2567698" rel="nofollow">写笔记</a></li>
               <li>
                 <img src="img/add-review.gif">&nbsp;
-                <a class="" href="https://book.douban.com/subject/2567698/new_review" rel="nofollow">写书评</a></li>
+                <a class="" href="https://book.douban.com/subject/2567698/book_review_edit" rel="nofollow">写书评</a></li>
               <li>
                     <span class="rr">
                       <img src="img/add-cart.gif">
@@ -360,14 +364,10 @@
                 </div>
               </div>
             </div>
-
-
             <link rel="stylesheet" href="css/style_book_detail.css">
             <div id="author_subject" class="author-wrapper">
               <div data-reactroot="" class="author-subject"></div>
             </div>
-
-
             <div id="db-rec-section" class="block5 subject_show knnlike">
               <h2>
                 <span class="">喜欢读"三体"的人也喜欢</span>&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
@@ -470,7 +470,7 @@
               <h2>
                 <span class="">短评</span>&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
                 <span class="pl">&nbsp;(
-                    <a href="https://book.douban.com/subject/2567698/comments/">全部 67762 条</a>)</span></h2>
+                    <a href="https://book.douban.com/subject/2567698/comments/">全部 ${bookDetail.commentCount} 条</a>)</span></h2>
             </div>
             <div class="nav-tab">
               <div class="tabs-wrapper  line">
@@ -480,97 +480,28 @@
                 <span>/</span>
                 <a class="short-comment-tabs " href="https://book.douban.com/subject/2567698/follows" data-tab="follows">好友</a></div>
             </div>
-
-
-
             <div id="comment-list-wrapper" class="indent">
-
-
               <div id="comments" class="comment-list hot show">
                 <ul>
-                  <li class="comment-item" data-cid="474389258">
-                    <div class="comment">
-                      <h3>
-                          <span class="comment-vote">
-                            <span id="c-474389258" class="vote-count">976</span>
-                            <a href="javascript:;" id="btn-474389258" class="j vote-comment" data-cid="474389258">有用</a></span>
-                        <span class="comment-info">
-                            <a href="https://www.douban.com/people/yuyan545/">亚比煞</a>
-                            <span class="user-stars allstar40 rating" title="推荐"></span>
-                            <span>2011-12-27</span></span>
-                      </h3>
-                      <p class="comment-content">
-                        <span class="short">最牛逼的科幻是能把最疯狂的想象写的像新闻报道一样真实。</span></p>
-                    </div>
-                  </li>
-                  <li class="comment-item" data-cid="851912743">
-                    <div class="comment">
-                      <h3>
-                          <span class="comment-vote">
-                            <span id="c-851912743" class="vote-count">344</span>
-                            <a href="javascript:;" id="btn-851912743" class="j vote-comment" data-cid="851912743">有用</a></span>
-                        <span class="comment-info">
-                            <a href="https://www.douban.com/people/kinglilychou/">张熊熊</a>
-                            <span class="user-stars allstar30 rating" title="还行"></span>
-                            <span>2014-10-07</span></span>
-                      </h3>
-                      <p class="comment-content">
-                        <span class="short">论文笔的重要性。。。如何讲砸一个好故事。。。</span></p>
-                    </div>
-                  </li>
-                  <li class="comment-item" data-cid="325720516">
-                    <div class="comment">
-                      <h3>
-                          <span class="comment-vote">
-                            <span id="c-325720516" class="vote-count">3050</span>
-                            <a href="javascript:;" id="btn-325720516" class="j vote-comment" data-cid="325720516">有用</a></span>
-                        <span class="comment-info">
-                            <a href="https://www.douban.com/people/frederickhfwang/">[已注销]</a>
-                            <span class="user-stars allstar20 rating" title="较差"></span>
-                            <span>2012-10-25</span></span>
-                      </h3>
-                      <p class="comment-content">
-                        <span class="short">幼稚，各种。对人性、对社会的运作方式的理解处在小学生水准，对女人的想象处在童男子水准。另外就是文笔之差，叙事毫无技巧，语言之粗糙，之鄙俗，让人不忍卒读。上不了台面的东西，给两星，因为我品性中宽厚的那一面在发作，另外略略懂科幻迷的感情</span></p>
-                    </div>
-                  </li>
-                  <li class="comment-item" data-cid="837562522">
-                    <div class="comment">
-                      <h3>
-                          <span class="comment-vote">
-                            <span id="c-837562522" class="vote-count">337</span>
-                            <a href="javascript:;" id="btn-837562522" class="j vote-comment" data-cid="837562522">有用</a></span>
-                        <span class="comment-info">
-                            <a href="https://www.douban.com/people/zoca/">S.A.M</a>
-                            <span class="user-stars allstar10 rating" title="很差"></span>
-                            <span>2014-08-18</span></span>
-                      </h3>
-                      <p class="comment-content">
-                        <span class="short">不是一般的啰嗦。</span></p>
-                    </div>
-                  </li>
-                  <li class="comment-item" data-cid="425448896">
-                    <div class="comment">
-                      <h3>
-                          <span class="comment-vote">
-                            <span id="c-425448896" class="vote-count">6011</span>
-                            <a href="javascript:;" id="btn-425448896" class="j vote-comment" data-cid="425448896">有用</a></span>
-                        <span class="comment-info">
-                            <a href="https://www.douban.com/people/thelongestyard/">方方土君</a>
-                            <span class="user-stars allstar50 rating" title="力荐"></span>
-                            <span>2011-08-14</span></span>
-                      </h3>
-                      <p class="comment-content">
-                        <span class="short">一直认为写作是件很耗费体力与脑力的事情，特别是从新构架一个新的世界，一个文明。这需要你有丰富的尝试与思考，过去，我们从来不缺少天马行空的想象力，但是少有一个如刘慈欣般有着历史、物理学与哲学思考的作者。所以从这个角度来讲，三体的出现对中国科幻界绝对是幸事。霍金之前曾经警告过我们，如果有外星人，他们对地球也是恶意的。那时我不懂，在读完这本书时我回想自己小时候拍打小虫子时的情景。或许，在更高级别的文明里...</span>
-                        <span class="hide-item full">一直认为写作是件很耗费体力与脑力的事情，特别是从新构架一个新的世界，一个文明。这需要你有丰富的尝试与思考，过去，我们从来不缺少天马行空的想象力，但是少有一个如刘慈欣般有着历史、物理学与哲学思考的作者。所以从这个角度来讲，三体的出现对中国科幻界绝对是幸事。霍金之前曾经警告过我们，如果有外星人，他们对地球也是恶意的。那时我不懂，在读完这本书时我回想自己小时候拍打小虫子时的情景。或许，在更高级别的文明里，你我只不过是虫子。</span>
-                        <span class="expand">(
-                            <a href="javascript:;">展开</a>)</span></p>
-                    </div>
-                  </li>
+                  <c:forEach items="${bookDetail.commentList}" var="comment" begin="1" end="5">
+                    <li class="comment-item" data-cid="474389258">
+                      <div class="comment">
+                        <h3>
+                            <span class="comment-vote">
+                              <span id="c-474389258" class="vote-count">${comment.love}</span>
+                              <a href="javascript:;" id="btn-474389258" class="j vote-comment" data-cid="474389258">有用</a></span>
+                          <span class="comment-info">
+                              <a href="https://www.douban.com/people/yuyan545/">${comment.userName}</a>
+                              <span class="user-stars allstar40 rating" title="推荐"></span>
+                              <span><fmt:formatDate value="${comment.commentTime}" pattern="yyyy-MM-dd HH:mm:ss"/></span></span>
+                        </h3>
+                        <p class="comment-content">
+                          <span class="short">${comment.commentContent}</span></p>
+                      </div>
+                    </li>
+                  </c:forEach>
                 </ul>
               </div>
-
-
-
               <div id="comments" class="comment-list new noshow">
                 <ul>
                   <li class="comment-item" data-cid="1776359085">
@@ -650,9 +581,6 @@
                   </li>
                 </ul>
               </div>
-
-
-
               <div id="comments" class="comment-list follows noshow">
                 <ul>
                   <li class="comment-item">
@@ -661,13 +589,12 @@
               </div>
             </div>
             <p>&gt;
-              <a href="https://book.douban.com/subject/2567698/comments/">更多短评 67762 条</a></p>
-
+              <a href="https://book.douban.com/subject/2567698/comments/">更多短评 ${bookDetail.commentCount} 条</a></p>
 
             <link rel="stylesheet" href="css/816a7a3028fac67.css">
             <section class="reviews mod book-content">
               <header>
-                <a href="book_review/${bookDetail.bookId}" rel="nofollow" class="create-review redbutt rr " data-isverify="True" data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/2567698/new_review">
+                <a href="book_review_edit/${bookDetail.bookId}" rel="nofollow" class="create-review redbutt rr " data-isverify="True" data-verify-url="https://www.douban.com/accounts/phone/verify?redir=https://book.douban.com/subject/2567698/new_review">
                   <span>我要写书评</span></a>
                 <h2>三体的书评 · · · · · ·
                   <span class="pl">(
@@ -678,98 +605,41 @@
                 <a href="javascript:;;" class="cur" data-sort="">热门</a>/
                 <a href="javascript:;;" data-sort="time">最新</a>/
                 <a href="javascript:;;" data-sort="follow">好友</a></div>
-
-
               <div class="review-list  ">
-                <div data-cid="1342728">
-                  <div class="main review-item" id="1342728">
-                    <header class="main-hd">
-                      <a href="https://www.douban.com/people/yinxiang/" class="avator">
-                        <img width="24" height="24" src="img/u1228445-130.jpg"></a>
-                      <a href="https://www.douban.com/people/yinxiang/" class="name">胤祥</a>
-                      <span class="allstar40 main-title-rating" title="推荐"></span>
-                      <span content="2008-04-03" class="main-meta">2008-04-03 03:20:04</span></header>
-                    <div class="main-bd">
-                      <h2>
-                        <a href="book_review">《三体》：当代史的科幻书写</a></h2>
-                      <div id="review_1342728_short" class="review-short" data-rid="1342728">
-                        <div class="short-content">评论刘慈欣的《三体》是件困难的事情，因为可以选择的角度太多。反复思量过后挑了这个角度，在我看来，写一部好的科幻小说，或者一部适合评论家们的科幻小说都不是难事，但是当作家的心思并不是用在这些上面，而是捎带着完成了这两件事的时候，就并不是那么容易了。很容易看出... &nbsp;(
-                          <a href="javascript:;" id="toggle-1342728-copy" class="unfold" title="展开">展开</a>)</div></div>
-                      <div id="review_1342728_full" class="hidden">
-                        <div id="review_1342728_full_content" class="full-content"></div>
-                      </div>
-                      <div class="action">
-                        <a href="javascript:;" class="action-btn up" data-rid="1342728" title="有用">
-                          <img src="img/up.png">
-                          <span id="r-useful_count-1342728">1237</span></a>
-                        <a href="javascript:;" class="action-btn down" data-rid="1342728" title="没用">
-                          <img src="img/down.png">
-                          <span id="r-useless_count-1342728">314</span></a>
-                        <a href="https://book.douban.com/review/1342728/#comments" class="reply ">201回应</a>
-                        <a href="javascript:;;" class="fold hidden">收起</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div data-cid="1347293">
-                  <div class="main review-item" id="1347293">
-                    <header class="main-hd">
-                      <a href="https://www.douban.com/people/amure/" class="avator">
-                        <img width="24" height="24" src="img/u1149007-1.jpg"></a>
-                      <a href="https://www.douban.com/people/amure/" class="name">小蓟·夏静好</a>
-                      <span class="allstar50 main-title-rating" title="力荐"></span>
-                      <span content="2008-04-08" class="main-meta">2008-04-08 09:25:48</span></header>
-                    <div class="main-bd">
-                      <h2>
-                        <a href="https://book.douban.com/review/1347293/">,外星人，躲在暗处</a></h2>
-                      <div id="review_1347293_short" class="review-short" data-rid="1347293">
-                        <div class="short-content">三个质量相同或相近的物体，会在引力作用下进行着无规律、永不重复的复杂运动。《三体》那本书里，半人马座的三颗星，就是“三体运动”中的“三体”，三颗恒星的光和热蕴育了一种智慧生命。 只是，太阳有3颗，是件麻烦事儿——有时太热，有时又太冷。那里的人把太阳正常的时期... &nbsp;(
-                          <a href="javascript:;" id="toggle-1347293-copy" class="unfold" title="展开">展开</a>)</div></div>
-                      <div id="review_1347293_full" class="hidden">
-                        <div id="review_1347293_full_content" class="full-content"></div>
-                      </div>
-                      <div class="action">
-                        <a href="javascript:;" class="action-btn up" data-rid="1347293" title="有用">
-                          <img src="img/up.png">
-                          <span id="r-useful_count-1347293">869</span></a>
-                        <a href="javascript:;" class="action-btn down" data-rid="1347293" title="没用">
-                          <img src="img/down.png">
-                          <span id="r-useless_count-1347293">135</span></a>
-                        <a href="https://book.douban.com/review/1347293/#comments" class="reply ">120回应</a>
-                        <a href="javascript:;;" class="fold hidden">收起</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div data-cid="6146948">
-                  <div class="main review-item" id="6146948">
-                    <header class="main-hd">
-                      <a href="https://www.douban.com/people/3295794/" class="avator">
-                        <img width="24" height="24" src="img/u3295794-1.jpg"></a>
-                      <a href="https://www.douban.com/people/3295794/" class="name">奥德赛的暗流</a>
-                      <span class="allstar50 main-title-rating" title="力荐"></span>
-                      <span content="2013-07-04" class="main-meta">2013-07-04 09:47:03</span></header>
-                    <div class="main-bd">
-                      <h2>
-                        <a href="https://book.douban.com/review/6146948/">信卢瑟，永世不得超生</a></h2>
-                      <div id="review_6146948_short" class="review-short" data-rid="6146948">
-                        <div class="short-content">（写在前面的补记：这是几年前写的书评了，当年还只能以个人直觉的感受去否定里面人物的思维，现在对社会学和经济学了解得多了一些以后，才发现卢瑟社会的本质是极高的交易成本和极大的资源浪费，由于频繁的内斗和屠杀导致大量本来能从事生产和发展的人力和资源都被毁灭掉了，... &nbsp;(
-                          <a href="javascript:;" id="toggle-6146948-copy" class="unfold" title="展开">展开</a>)</div></div>
-                      <div id="review_6146948_full" class="hidden">
-                        <div id="review_6146948_full_content" class="full-content"></div>
-                      </div>
-                      <div class="action">
-                        <a href="javascript:;" class="action-btn up" data-rid="6146948" title="有用">
-                          <img src="img/up.png">
-                          <span id="r-useful_count-6146948">1365</span></a>
-                        <a href="javascript:;" class="action-btn down" data-rid="6146948" title="没用">
-                          <img src="img/down.png">
-                          <span id="r-useless_count-6146948">1031</span></a>
-                        <a href="https://book.douban.com/review/6146948/#comments" class="reply ">1095回应</a>
-                        <a href="javascript:;;" class="fold hidden">收起</a></div>
-                    </div>
-                  </div>
-                </div>
 
-                <!-- COLLECTED CSS --></div>
+                  <c:forEach items="${bookDetail.reviewList}" var="review" begin="0" end="3">
+                      <div data-cid="1342728">
+                          <div class="main review-item" id="1342728">
+                              <header class="main-hd">
+                                  <a href="https://www.douban.com/people/yinxiang/" class="avator">
+                                      <img width="24" height="24" src="${review.image}"></a>
+                                  <a href="https://www.douban.com/people/yinxiang/" class="name">${review.userName}</a>
+                                  <span class="allstar40 main-title-rating" title="推荐"></span>
+                                  <span content="2008-04-03" class="main-meta"><fmt:formatDate value="${review.reviewTime}" pattern="yyyy-MM-dd HH:mm:ss"/> </span></header>
+                              <div class="main-bd">
+                                  <h2>
+                                      <a href="book_review_detail/${review.reviewId}">${bookDetail.name}</a></h2>
+                                  <div id="review_1342728_short" class="review-short" data-rid="1342728">
+                                      <div class="short-content">
+                                              ${fn:substring(review.reviewContent,fn:indexOf(review.reviewContent, "<p>") , fn:indexOf(review.reviewContent, "</p>"))}
+                                      </div>
+                                  </div>
+                                  <div class="action">
+                                      <a href="javascript:;" class="action-btn up" data-rid="1342728" title="有用">
+                                          <img src="img/up.png">
+                                          <span id="r-useful_count-1342728">${review.love}</span></a>
+                                      <a href="javascript:;" class="action-btn down" data-rid="1342728" title="没用">
+                                          <img src="img/down.png">
+                                          <span id="r-useless_count-1342728">${review.hate}</span></a>
+                                      <a href="https://book.douban.com/review/1342728/#comments" class="reply ">201回应</a>
+                                      <a href="javascript:;;" class="fold hidden">收起</a></div>
+                              </div>
+                          </div>
+                      </div>
+                  </c:forEach>
+
+
+                </div>
               <p class="pl">&gt;
                 <a href="https://book.douban.com/subject/2567698/reviews">更多书评2178篇</a></p>
             </section>
@@ -1006,6 +876,9 @@
           <a href="https://www.douban.com/partner/">豆瓣广告</a></span>
     </div>
   </div>
+
+
+
   <!-- anson13-docker-->
   <div id="search_suggest" style="display: none; top: 78px; left: 593.906px;">
     <ul></ul>
@@ -1034,20 +907,22 @@
   $("#star_five").css("width", five*100/num+"px").next().text((five*100/num).toFixed(1)+"%");
 
   function  doComment() {
+    document.getElementById("close-comment").click();//模拟点击事件，或者使用jq，但是需要把jq对象转化为dom
     var comment_data = {
       bookId:"${bookDetail.bookId}",
       userId:"0",
+        love:"0",
       commentTime:new Date(),
       commentContent:$('#commentContent').val()
     }
     $.ajax({
       type:"post",
       url:"http://localhost:8080/amazon/book_comment_insert",
+      async:true,
       contentType:"application/json",
       dataType:"json",
       data:JSON.stringify(comment_data),
       success:function (ret) {
-        document.getElementById("close-comment").click();//模拟点击事件，或者使用jq，但是需要把jq对象转化为dom
         alert(ret.msg);
       },
       error:function (error) {

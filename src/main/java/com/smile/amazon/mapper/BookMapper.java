@@ -1,6 +1,7 @@
 package com.smile.amazon.mapper;
 
 import com.smile.amazon.dto.BookDetailDTO;
+import com.smile.amazon.dto.BookReviewDTO;
 import com.smile.amazon.model.Book;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface BookMapper {
     List<Book> bookList();
 
     BookDetailDTO bookDetailDTO(Integer bookId);
+
+    BookReviewDTO bookReviewDTO(Integer bookId);
 }

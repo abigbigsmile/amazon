@@ -125,4 +125,22 @@
       review_content = #{reviewContent,jdbcType=VARCHAR}
     where review_id = #{reviewId,jdbcType=INTEGER}
   </update>
+
+
+  <select id="getBookReview" resultMap="Testmap">
+    select *
+    from book
+    where book_id=#{bookId}
+  </select>
+  <resultMap id="Testmap" type="testBookReview" extends="com.smile.amazon.mapper.BookMapper.BaseResultMap">
+    <collection property="reviewList" fetchType="lazy" column="book_id" select="getBookReview"></collection>
+  </resultMap>
+
+  <select id="TestSelect" parameterType="int" resultMap="testReviewmap">
+    select *
+    from review
+    where review.book_id=#{bookId}
+  </select>
+  <resultMap id="testReviewmap" type="review" extends="BaseResultMap"/>
+
 </mapper>
