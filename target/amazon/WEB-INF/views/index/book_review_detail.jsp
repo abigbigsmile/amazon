@@ -1,11 +1,12 @@
 <%@page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
 <%@ page isELIgnored="false"%>
 <jsp:useBean id="timer" class="java.util.Date"/>
 <!DOCTYPE html>
 <!-- saved from url=(0039)https://book.douban.com/review/4679379/ -->
 <html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
-  
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="renderer" content="webkit">
@@ -15,15 +16,7 @@
     <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
-    <meta name="description" content="对奇洛的感想">
-    <meta name="keywords" content="书评,评论,哈利·波特与魔法石,观后感">
     <meta http-equiv="mobile-agent" content="format=html5; url=http://m.douban.com/book/review/4679379//">
-    <meta property="og:title" content="对奇洛的感想">
-    <meta property="og:site_name" content="豆瓣">
-    <meta property="og:url" content="https://book.douban.com/review/4679379/">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="“我在环游世界的时候遇到了他。那时候的我只是一个愚蠢的年轻人，脑袋里装满了一..">
-    <meta property="og:image" content="https://img3.doubanio.com/view/subject/l/public/s1990480.jpg">
     <base href="http://localhost:8080/amazon/"/>
     <link href="css/book_review_detail/douban.css" rel="stylesheet" type="text/css">
     <link href="css/book_review_detail/_all.css" rel="stylesheet" type="text/css">
@@ -35,7 +28,9 @@
     <link rel="stylesheet" href="css/book_review_detail/index.css">
     <link rel="stylesheet" href="css/book_review_detail/style.min.css">
     <style type="text/css">.author-wrap { margin-bottom: 40px; } .gallery_topic { display: block; border-radius: 2px; border: 1px solid rgba(0, 0, 0, 0.15); padding: 20px; color: #000000; margin-bottom: 30px; overflow: hidden; width: 675px; box-sizing: border-box; } .gallery_topic:hover{ background: #fff; } .gallery_topic h2{ color: #333; line-height: 1; margin-bottom: 8px; font-weight: 500; } .gallery_topic .meta{ color: #999999; float: left; line-height: 1; } .gallery_topic .link { color: #37a; float: right; line-height: 1; } .gallery_topic .link:hover { color: #fff; background: #37a; }</style>
-    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon"></head>
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  </head>
   
   <body class="vsc-initialized">
     <link href="css/book_review_detail/bundle.css" rel="stylesheet" type="text/css">
@@ -190,40 +185,42 @@
         <a href="https://book.douban.com/annual/2018?source=book_navigation" class="bookannual2018"></a>
       </div>
     </div>
+
+
     <div id="wrapper" class="book-content review-wrapper">
       <div id="content">
         <div class="grid-16-8 clearfix">
           <div class="article">
             <h1>
-              <span property="v:summary">对奇洛的感想</span></h1>
+              <span property="v:summary">${bookReview.reviewTitle}</span></h1>
             <div>
               <div class="main" id="4679379">
                 <a class="avatar author-avatar left" href="https://www.douban.com/people/3606444/">
-                  <img width="48" height="48" src="img/u3606444-2.jpg"></a>
+                  <img width="48" height="48" src="${bookReview.image}"></a>
                 <header class="main-hd">
                   <a href="https://www.douban.com/people/3606444/">
-                    <span>萝卜狼</span></a>评论
-                  <a href="https://book.douban.com/subject/1041007/">哈利·波特与魔法石</a>
+                    <span>${bookReview.userName}</span></a>  评论
+                  <a href="https://book.douban.com/subject/1041007/">  ${bookReview.book.name}</a>
                   <span class="allstar50 main-title-rating" title="力荐"></span>
                   <span class="main-title-hide">5</span>
-                  <span content="2011-02-24" class="main-meta">2011-02-24 13:47:47</span></header>
+                  <span class="main-meta">
+                    <fmt:formatDate value="${bookReview.reviewTime}" type="date" pattern="yyyy-MM-dd HH:mm:ss"/>
+                  </span>
+                </header>
                 <div class="main-bd">
                   <div id="link-report">
-                    <div class="review-content clearfix" id="review-content" data-author="萝卜狼" data-url="https://book.douban.com/review/4679379/" data-original="0">“我在环游世界的时候遇到了他。那时候的我只是一个愚蠢的年轻人，脑袋里装满了一些奇奇怪怪的关于善与恶的观点。是伏地魔使我认识到我是多么的错误和无知。实际上善与恶是不存在的，只有力量才是最重要，而那些弱者就应该……从那时开始我就忠心耿耿地跟随着他了，虽然我也曾经拒绝过他几次，因为他对我实在是太严厉了。"
-                      <br>
-                      <br>奇洛教授在最后被发现是幕后黑手时，和哈利聊天时的自白。。
-                      <br>
-                      <br>“那时候的我只是一个愚蠢的年轻人，脑袋里装满了一些奇奇怪怪的关于善与恶的观点。”
-                      <br>其实感觉这一段自白挺值得深思的。。如果他那个时候遇到的是邓布利多，而不是伏地魔，可能事情就完全不同了。。而且每个人应该都有过像这样的迷惑时期吧（青春期？），在定下人生观的时期真的很需要一个好老师来指导。</div>&nbsp;
+                    <div class="review-content clearfix" id="review-content">
+                      ${bookReview.reviewContent}
+                    </div>&nbsp;
                     <a rel="nofollow" href="javascript:;" data-rid="4679379" class="report report_review right">举报</a></div>
                   <div class="main-author"></div>
                 </div>
                 <div class="main-ft">
                   <div class="main-panel" name="4679379">
                     <div class="main-panel-useful" data-rid="4679379" data-is_owner="false" data-can_vote="true">
-                      <button class="btn useful_count 4679379 ">有用 11</button>
-                      <button class="btn useless_count 4679379 ">没用 0</button>
-                      <span class="spoiler not-reported " data-rid="4679379">有关键情节透露</span></div>
+                      <button class="btn useful_count 4679379 ">有用 ${bookReview.love}</button>
+                      <button class="btn useless_count 4679379 ">没用 ${bookReview.hate}</button>
+                    </div>
                     <div class="main-sharing">
                       <style>.footer-sharing { text-align: right; }</style>
                       <div class="review-bar">
@@ -277,41 +274,46 @@
               </li>
             </ul>
             <div id="comments" class="comment-list" data-start="0" data-reply_length="90">
-              <div class="comment-item" id="7213620" data-cid="7213620" data-user_name="小嘟嘟" data-user_url="https://www.douban.com/people/ntcalmer/" data-target_id="4679379" data-target_kind="1012" data-ref_cid="0">
-                <div class="avatar left">
-                  <a href="https://www.douban.com/people/ntcalmer/">
-                    <img width="48" height="48" src="img/u79978855-1.jpg" alt="小嘟嘟"></a>
-                </div>
-                <div class="content report-comment">
-                  <div class="header">
-                    <a href="https://www.douban.com/people/ntcalmer/">小嘟嘟</a>
-                    <span>2015-12-11 16:07:29</span></div>
-                  <p class="comment-text">“善与恶是不存在的，只有力量才是最重要，而那些弱者就应该……”翻译一下就是，没有好人坏人，只有强者弱者</p>
-                  <div class="op-lnks">
-                    <a href="https://www.douban.com/doubanapp/" class="comment-source" target="_blank">来自豆瓣App</a>
-                    <a href="https://book.douban.com/review/4679379/#add_comment" data-cid="7213620" class="reply_comment">回应</a>&nbsp;
-                    <a rel="nofollow" href="javascript:;" data-cid="7213620" class="report report_comment">举报</a></div>
-                  <div class="group_banned">
+
+              <c:forEach items="${bookReview.reviewCommentList}" var="reviewComment">
+                <div class="comment-item" id="7213620">
+                  <div class="avatar left">
+                    <a href="https://www.douban.com/people/ntcalmer/">
+                      <img width="48" height="48" src="${reviewComment.image}" alt="${reviewComment.userName}"></a>
+                  </div>
+                  <div class="content report-comment">
+                    <div class="header">
+                      <a href="https://www.douban.com/people/ntcalmer/">${reviewComment.userName}</a>
+                      <span>
+                        <fmt:formatDate value="${reviewComment.rcommentTime}" type="date" pattern="yyyy-MM-dd HH:mm:ss"/>
+                      </span></div>
+                    <p class="comment-text">
+                      ${reviewComment.rcommentContent}
+                    </p>
+                    <div class="group_banned">
                     <span class="gact hidden p_u79978855 p_admin p_intern fright">&gt;
-                      <a href="javascript:;" data-cid="7213620" class="remove_comment">删除</a></span>
+                      <a href="javascript:;" class="remove_comment">删除</a></span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </c:forEach>
+
               <div id="last" data-last_page_start="0"></div>
               <section class="review-comment-form" id="add_comment">
                 <div class="form-textarea-wrapper">
                   <div class="avatar ">
                     <a href="https://www.douban.com/people/131598133/">
-                      <img width="48" height="48" src="img/user_normal.jpg" alt="电影中发现世界"></a>
+                      <img width="48" height="48" src="${bookReview.image}" alt="电影中发现世界"></a>
                   </div>
                   <div class="form-field">
-                    <textarea class="form-textarea" placeholder=" 添加回应" rows="4" cols="64"></textarea>
-                    <button class="add_comment js-verify-account" data-is-verified="True" data-verify-url="https://www.douban.com/accounts/phone/verify">加上去</button>
-                    <span class="error hidden">你的回应中有被禁止的内容</span></div>
+                    <textarea id="comment_content" class="form-textarea" placeholder=" 添加回应" rows="4" cols="64"></textarea>
+                    <button class="add_comment js-verify-account" onclick="addComment()">加上去</button>
+                  </div>
                 </div>
               </section>
             </div>
           </div>
+
           <div class="aside">
             <!-- douban ad begin -->
             <div id="dale_book_review_top_right"></div>
@@ -320,35 +322,39 @@
             <div class="sidebar-info-wrapper">
               <div class="sidebar-copy"></div>
               <div class="subject-title">
-                <a href="https://book.douban.com/subject/1041007/">&gt;&nbsp;哈利·波特与魔法石</a></div>
+                <a href="book_detail/${bookReview.book.bookId}">&gt;&nbsp;${bookReview.book.name}</a></div>
               <div class="subject-img">
                 <a href="https://book.douban.com/subject/1041007/">
-                  <img alt="哈利·波特与魔法石" title="哈利·波特与魔法石" src="img/s1990480.jpg" rel="v:image"></a>
+                  <img alt="${bookReview.book.name}" title="${bookReview.book.name}" src="${bookReview.book.coverImage}"></a>
               </div>
               <div class="subject-info book-info">
                 <ul class="info-list">
                   <li class="info-item">
                     <span class="info-item-key">作者:</span>
-                    <span class="info-item-val">[英] J. K. 罗琳</span></li>
+                    <span class="info-item-val">${bookReview.book.author}</span></li>
                   <li class="info-item">
                     <span class="info-item-key">出版:</span>
-                    <span class="info-item-val">人民文学出版社</span></li>
+                    <span class="info-item-val">${bookReview.book.publish}</span></li>
+                  <li class="info-item">
+                    <span class="info-item-key">类型:</span>
+                    <span class="info-item-val">${bookReview.book.type}</span></li>
+                  <li class="info-item">
+                    <span class="info-item-key">ISBN:</span>
+                    <span class="info-item-val">${bookReview.book.isbn}</span></li>
                   <li class="info-item">
                     <span class="info-item-key">定价:</span>
-                    <span class="info-item-val">19.50元</span></li>
-                  <li class="info-item">
-                    <span class="info-item-key">装帧:</span>
-                    <span class="info-item-val">平装</span></li>
-                  <li class="info-item">
-                    <span class="info-item-key">页数:</span>
-                    <span class="info-item-val">191</span></li>
+                    <span class="info-item-val">${bookReview.book.price}</span></li>
                   <li class="info-item">
                     <span class="info-item-key">时间:</span>
-                    <span class="info-item-val">2000-9</span></li>
+                    <span class="info-item-val">
+                      <fmt:formatDate value="${bookReview.book.publishTime}" type="date" pattern="yyyy-MM-dd"/>
+                    </span></li>
                 </ul>
               </div>
             </div>
           </div>
+
+
           <div class="extra"></div>
         </div>
       </div>
@@ -367,11 +373,39 @@
           <a href="https://www.douban.com/partner/">豆瓣广告</a></span>
       </div>
     </div>
-    <link type="text/css" rel="stylesheet" href="img/dialog.css">
+
+
+    <link type="text/css" rel="stylesheet" href="css/book_review_detail/dialog.css">
     <div id="search_suggest" style="display: none; top: 78px; left: 593.906px;">
       <ul></ul>
     </div>
     <div></div>
   </body>
+  <script type="text/javascript">
+    function addComment(){
+      var data = {
+        reviewId:${bookReview.reviewId},
+        userId:${bookReview.userId},
+        rcommentTime:new Date(),
+        rcommentContent:$("#comment_content").val()
+      }
+      $.ajax({
+        type:"post",
+        url:"http://localhost:8080/amazon/review_comment_insert",
+        dataType:"json",
+        contentType:"application/json",
+        data:JSON.stringify(data),
+        success:function (ret) {
+          $("#comment_content").val("");
+          alert(ret.msg);
+          window.location.reload();
+        },
+        errer:function (err) {
+          console.log(err);
+        }
+      });
+    }
+
+  </script>
 
 </html>

@@ -180,24 +180,10 @@
   <select id="bookList" resultMap="BaseResultMap">
     select * from book
   </select>
-  <select id="bookReviewDTO" parameterType="int" resultMap="BookReviewResultMap">
-    select *
-    from book
-    where book_id=#{bookId}
-  </select>
-  <resultMap id="BookReviewResultMap" type="com.smile.amazon.dto.BookReviewDTO" extends="BaseResultMap">
-    <collection property="reviewQueryList" ofType="reviewQueryVO" column="book_id" select="findReviewQueryVO"/>
-  </resultMap>
-  <select id="findReviewQueryVO" parameterType="int" resultMap="ReviewQueryVOmap">
-    select review.*,user.user_name, user.image
-    from review,user
-    where review.book_id=#{bookId} and review.user_id = user.user_id
-  </select>
-  <resultMap id="ReviewQueryVOmap" type="reviewQueryVO" extends="com.smile.amazon.mapper.ReviewMapper.BaseResultMap">
-    <result property="userName" column="user_name"/>
-    <result property="image" column="image"/>
-  </resultMap>
 
+
+
+  <!-- 查询BookDetailDTO -->
   <select id="bookDetailDTO" parameterType="java.lang.Integer" resultMap="BookDetailResultMap">
       SELECT book.*,
               star.*,
@@ -226,6 +212,38 @@
     <result column="love" jdbcType="TINYINT" property="love" />
     <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
+  </resultMap>
+  <select id="findReviewQueryVO" parameterType="int" resultMap="ReviewQueryVOmap">
+    select review.*,user.user_name, user.image
+    from review,user
+    where review.book_id=#{bookId} and review.user_id = user.user_id
+  </select>
+  <resultMap id="ReviewQueryVOmap" type="reviewQueryVO" extends="com.smile.amazon.mapper.ReviewMapper.BaseResultMap">
+    <result property="userName" column="user_name"/>
+    <result property="image" column="image"/>
+  </resultMap>
+
+  <!-- 查询BookReviewDTO -->
+  <select id="bookReviewDTO" parameterType="java.lang.Integer" resultMap="BookReviewResultMap">
+    select review.*,book.*,user.user_name,user.image
+    from review,book,user
+    where review.review_id=#{reviewId} and review.book_id=book.book_id and review.user_id=user.user_id
+  </select>
+  <resultMap id="BookReviewResultMap" type="com.smile.amazon.dto.BookReviewDTO" extends="com.smile.amazon.mapper.ReviewMapper.BaseResultMap">
+    <result property="userName" column="user_name"/>
+    <result property="image" column="image"/>
+    <association property="book" javaType="com.smile.amazon.model.Book" resultMap="BaseResultMap"/>
+    <collection property="reviewCommentList" ofType="ReviewComment" column="review_id" select="findReviewCommentQueryVO"/>
+  </resultMap>
+  <select id="findReviewCommentQueryVO" parameterType="java.lang.Integer" resultMap="ReviewCommentQueryVOmap">
+      select review_comment.*,user.user_name,user.image
+      from review_comment,user
+      where review_comment.review_id=#{reviewId} and review_comment.user_id=user.user_id
+      order by rcomment_time desc
+  </select>
+  <resultMap id="ReviewCommentQueryVOmap" type="com.smile.amazon.queryVO.ReviewCommentQueryVO" extends="com.smile.amazon.mapper.ReviewCommentMapper.BaseResultMap">
+    <result property="userName" column="user_name"/>
+    <result property="image" column="image"/>
   </resultMap>
 
 </mapper>

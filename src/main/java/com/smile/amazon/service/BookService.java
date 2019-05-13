@@ -5,6 +5,7 @@ import com.smile.amazon.dto.BookReviewDTO;
 import com.smile.amazon.model.Book;
 import com.smile.amazon.model.Comment;
 import com.smile.amazon.model.Review;
+import com.smile.amazon.model.ReviewComment;
 
 import java.util.List;
 
@@ -20,5 +21,7 @@ public interface BookService {
 
     int insertReview(Review review);
 
-    BookReviewDTO bookReviewDTO(Integer bookId);
+    int insertReviewComment(ReviewComment reviewComment);
+
+    BookReviewDTO bookReviewDTO(Integer reviewId);
 }

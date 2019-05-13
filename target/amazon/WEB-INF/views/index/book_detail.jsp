@@ -11,21 +11,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <base href="http://localhost:8080/amazon/"/>
   <title>${bookDetail.name}(豆瓣)</title>
-
-  <link type="text/css" rel="stylesheet" href="css/dialog.css">
-  <link type="text/css" rel="stylesheet" href="css/setting_standalone.css">
-  <link type="text/css" rel="stylesheet" href="css/report_dialog.css">
-
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
   <meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/book/subject/2567698/">
   <meta name="keywords" content="三体,刘慈欣,重庆出版社,2008-1,简介,作者,书评,论坛,推荐,二手">
   <meta name="description" content="图书三体 介绍、书评、论坛及推荐 ">
 
+
+
+  <link type="text/css" rel="stylesheet" href="css/dialog.css">
+  <link type="text/css" rel="stylesheet" href="css/setting_standalone.css">
+  <link type="text/css" rel="stylesheet" href="css/report_dialog.css">
   <link href="css/master.css" rel="stylesheet" type="text/css">
   <link href="css/init.css" rel="stylesheet">
-  <style type="text/css"></style>
-
   <link rel="stylesheet" href="css/subject.css">
   <link href="css/like.css" rel="stylesheet">
   <link rel="stylesheet" href="css/648cc550d3df41fa.css">
@@ -189,7 +187,7 @@
         <li>
           <a href="https://www.douban.com/standbyme/2018?source=navigation" target="_blank">2018书影音报告</a></li>
         <li class=" book-cart">
-          <a href="https://market.douban.com/cart/?biz_type=book&amp;utm_campaign=book_nav_cart&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank">购物车(0)</a></li>
+          <a href="book_shoppingcart" target="_self">购物车(0)</a></li>
       </ul>
     </div>
     <a href="https://book.douban.com/annual/2018?source=book_navigation" class="bookannual2018"></a>
