@@ -3,6 +3,7 @@ package com.smile.amazon.controller;
 
 import com.smile.amazon.dto.BookDetailDTO;
 import com.smile.amazon.dto.BookReviewDTO;
+import com.smile.amazon.dto.ShoppingcartDTO;
 import com.smile.amazon.model.*;
 import com.smile.amazon.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,13 +43,7 @@ public class BookController {
     public String book_detail(@PathVariable Integer bookId, Model model){
         BookDetailDTO bookDetail = bookService.bookDetail(bookId);
         model.addAttribute("bookDetail", bookDetail);
-        return "/index/book_detail";
-    }
-
-    //跳转到购物车页面
-    @RequestMapping(value = "book_shoppingcart")
-    public String book_shoppingcart(){
-        return "index/book_shoppingcart";
+        return "index/book_detail";
     }
 
     //跳转到书评编辑页面
@@ -59,7 +54,6 @@ public class BookController {
         return "index/book_review_edit";
     }
 
-    //
     //跳转到书评详情页面
     @RequestMapping(value = "book_review_detail/{reviewId}")
     public String book_review_detail(Model model, @PathVariable("reviewId") Integer reviewId){
@@ -114,12 +108,6 @@ public class BookController {
             message.setMsg("您的书评提交过程出现问题，不好意思……");
         }
         return message;
-    }
-
-    //跳转到图书书评页面
-    @RequestMapping(value = "book_review")
-    public String book_review(){
-        return "index/book_review";
     }
 
     //插入短评

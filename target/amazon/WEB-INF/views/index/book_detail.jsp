@@ -178,16 +178,8 @@
           <a href="https://book.douban.com/tag/">分类浏览</a></li>
         <li>
           <a href="https://book.douban.com/cart/">购书单</a></li>
-        <li>
-          <a href="https://read.douban.com/ebooks/?dcs=book-nav&amp;dcm=douban" target="_blank">电子图书</a></li>
-        <li>
-          <a href="https://market.douban.com/book?utm_campaign=book_nav_freyr&amp;utm_source=douban&amp;utm_medium=pc_web">豆瓣书店</a></li>
-        <li>
-          <a href="https://book.douban.com/annual/2018?source=navigation" target="_blank">2018年度榜单</a></li>
-        <li>
-          <a href="https://www.douban.com/standbyme/2018?source=navigation" target="_blank">2018书影音报告</a></li>
         <li class=" book-cart">
-          <a href="book_shoppingcart" target="_self">购物车(0)</a></li>
+          <a href="shoppingcart/book_shoppingcart" >我的购物车</a></li>
       </ul>
     </div>
     <a href="https://book.douban.com/annual/2018?source=book_navigation" class="bookannual2018"></a>
@@ -317,7 +309,7 @@
               <li>
                     <span class="rr">
                       <img src="img/add-cart.gif">
-                      <a name="2567698" class="j a_add2cart" href="javascript:;">加入购书单</a>
+                      <a name="2567698" class="j a_add2cart" href="javascript:;" onclick="addShoppingcart()">加入购物车</a>
                       <span class="hidden">已在
                         <a href="https://book.douban.com/cart">购书单</a></span>
                     </span>
@@ -456,7 +448,7 @@
             </div>
             <link rel="stylesheet" href="css/comment.css">
             <div class="mod-hd">
-              <a id="say" class="redbutt j a_collect_btn rr big-link" name="cbtn-2567698" href="javascript:;" rel="nofollow" data-reveal-id="myModal">
+              <a id="say" class="redbutt j a_collect_btn rr big-link" name="cbtn-2567698" href="javascript:;" rel="nofollow" data-reveal-id="myModal" onclick="isLogin(this)">
                 <span>我来说两句</span></a>
 
               <div id="myModal" class="reveal-modal">
@@ -887,6 +879,7 @@
 </body>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
 <%-- 计算评分 --%>
 <script type="text/javascript">
   var one=${bookDetail.star.starOneNum};
@@ -922,6 +915,29 @@
       data:JSON.stringify(comment_data),
       success:function (ret) {
         alert(ret.msg);
+      },
+      error:function (error) {
+        console.log(error);
+      }
+
+    });
+  }
+
+  function  addShoppingcart() {
+    var cart_data = {
+      bookId:"${bookDetail.bookId}"
+    }
+    $.ajax({
+      type:"post",
+      url:"http://localhost:8080/amazon/shoppingcart/addShoppingcart",
+      contentType:"application/json",
+      dataType:"json",
+      data:JSON.stringify(cart_data),
+      success:function (ret) {
+        console.log(ret);
+        if(ret == "0"){
+          alert("请先登录！！！！")
+        }
       },
       error:function (error) {
         console.log(error);

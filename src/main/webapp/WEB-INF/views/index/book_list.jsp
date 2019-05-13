@@ -22,7 +22,6 @@
     <link href="css/init_book_list.css" rel="stylesheet">
     <link rel="stylesheet" href="css/13419eb47c7c7dd7.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <%--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>--%>
     <script type="text/javascript">
       $(document).ready(function(){
 
@@ -132,7 +131,7 @@
           </div>
         </div>
         <div class="top-nav-doubanapp">
-          <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+          <a href="user/login" class="lnk-doubanapp">登录/注册</a>
           <div id="doubanapp-tip">
             <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣
               <span class="version">6.0</span>全新发布</a>

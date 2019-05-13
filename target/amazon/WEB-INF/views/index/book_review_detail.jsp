@@ -1,11 +1,9 @@
 <%@page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
 <%@ page isELIgnored="false"%>
 <jsp:useBean id="timer" class="java.util.Date"/>
 <!DOCTYPE html>
-<!-- saved from url=(0039)https://book.douban.com/review/4679379/ -->
 <html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,6 +31,7 @@
   </head>
   
   <body class="vsc-initialized">
+
     <link href="css/book_review_detail/bundle.css" rel="stylesheet" type="text/css">
     <div id="db-global-nav" class="global-nav">
       <div class="bd">
@@ -185,7 +184,6 @@
         <a href="https://book.douban.com/annual/2018?source=book_navigation" class="bookannual2018"></a>
       </div>
     </div>
-
 
     <div id="wrapper" class="book-content review-wrapper">
       <div id="content">
@@ -373,13 +371,8 @@
           <a href="https://www.douban.com/partner/">豆瓣广告</a></span>
       </div>
     </div>
-
-
     <link type="text/css" rel="stylesheet" href="css/book_review_detail/dialog.css">
-    <div id="search_suggest" style="display: none; top: 78px; left: 593.906px;">
-      <ul></ul>
-    </div>
-    <div></div>
+
   </body>
   <script type="text/javascript">
     function addComment(){

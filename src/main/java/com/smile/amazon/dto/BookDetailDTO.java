@@ -3,6 +3,7 @@ package com.smile.amazon.dto;
 
 import com.smile.amazon.model.Book;
 import com.smile.amazon.model.Review;
+import com.smile.amazon.model.Shoppingcart;
 import com.smile.amazon.model.Star;
 import com.smile.amazon.queryVO.CommentQueryVO;
 import com.smile.amazon.queryVO.ReviewQueryVO;
@@ -15,7 +16,6 @@ import java.util.List;
 @Repository
 public class BookDetailDTO extends Book {
 
-    @Autowired
     private Star star;
 
     private List<CommentQueryVO> commentList;
