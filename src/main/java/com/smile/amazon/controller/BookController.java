@@ -3,10 +3,7 @@ package com.smile.amazon.controller;
 
 import com.smile.amazon.dto.BookDetailDTO;
 import com.smile.amazon.dto.BookReviewDTO;
-import com.smile.amazon.model.Book;
-import com.smile.amazon.model.Comment;
-import com.smile.amazon.model.Message;
-import com.smile.amazon.model.Review;
+import com.smile.amazon.model.*;
 import com.smile.amazon.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +24,6 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
-
 
     @Autowired
     private Message message;
@@ -52,7 +48,7 @@ public class BookController {
     //跳转到购物车页面
     @RequestMapping(value = "book_shoppingcart")
     public String book_shoppingcart(){
-        return "/index/book_shoppingcart";
+        return "index/book_shoppingcart";
     }
 
     //跳转到书评编辑页面
@@ -63,9 +59,12 @@ public class BookController {
         return "index/book_review_edit";
     }
 
+    //
     //跳转到书评详情页面
     @RequestMapping(value = "book_review_detail/{reviewId}")
-    public String book_review_detail(@PathVariable("reviewId") Integer reviewId){
+    public String book_review_detail(Model model, @PathVariable("reviewId") Integer reviewId){
+        BookReviewDTO bookReview = bookService.bookReviewDTO(reviewId);
+        model.addAttribute("bookReview", bookReview);
         return "index/book_review_detail";
     }
 
@@ -117,18 +116,36 @@ public class BookController {
         return message;
     }
 
-
+    //跳转到图书书评页面
     @RequestMapping(value = "book_review")
     public String book_review(){
         return "index/book_review";
     }
 
+    //插入短评
     @RequestMapping(value = "book_comment_insert")
     @ResponseBody
     public Message book_comment_insert(@RequestBody Comment comment){
         try {
             bookService.insertComment(comment);
             message.setStatus(1);
+            message.setMsg("评论成功！！！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            message.setStatus(-1);
+            message.setMsg("评论出现一丁点问题……");
+            return  message;
+        }
+        return message;
+    }
+
+    //插入书评评论
+    @RequestMapping(value = "review_comment_insert")
+    @ResponseBody
+    public Message review_comment_insert(@RequestBody ReviewComment reviewComment){
+        try {
+            int flag = bookService.insertReviewComment(reviewComment);
+            message.setStatus(flag);
             message.setMsg("评论成功！！！");
         } catch (Exception e) {
             e.printStackTrace();

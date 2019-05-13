@@ -23,5 +23,5 @@ public interface BookMapper {
 
     BookDetailDTO bookDetailDTO(Integer bookId);
 
-    BookReviewDTO bookReviewDTO(Integer bookId);
+    BookReviewDTO bookReviewDTO(Integer reviewId);
 }

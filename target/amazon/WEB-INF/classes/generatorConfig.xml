@@ -58,13 +58,13 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table tableName="comment" domainObjectName="Comment"
+        <table tableName="review_comment" domainObjectName="ReviewComment"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false">
-            <columnOverride column="comment_content" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
+            <columnOverride column="rcomment_content" javaType="java.lang.String" jdbcType="VARCHAR"></columnOverride>
         </table>
 
 

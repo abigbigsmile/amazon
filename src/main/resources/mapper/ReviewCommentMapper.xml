@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.amazon.mapper.ReviewCommentMapper">
+  <resultMap id="BaseResultMap" type="com.smile.amazon.model.ReviewComment">
+    <id column="rcomment_id" jdbcType="INTEGER" property="rcommentId" />
+    <result column="review_id" jdbcType="INTEGER" property="reviewId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="rcomment_time" jdbcType="TIMESTAMP" property="rcommentTime" />
+    <result column="rcomment_content" jdbcType="VARCHAR" property="rcommentContent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    rcomment_id, review_id, user_id, rcomment_time, rcomment_content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from review_comment
+    where rcomment_id = #{rcommentId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from review_comment
+    where rcomment_id = #{rcommentId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.smile.amazon.model.ReviewComment">
+    insert into review_comment (rcomment_id, review_id, user_id, 
+      rcomment_time, rcomment_content)
+    values (#{rcommentId,jdbcType=INTEGER}, #{reviewId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{rcommentTime,jdbcType=TIMESTAMP}, #{rcommentContent,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.smile.amazon.model.ReviewComment">
+    insert into review_comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="rcommentId != null">
+        rcomment_id,
+      </if>
+      <if test="reviewId != null">
+        review_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="rcommentTime != null">
+        rcomment_time,
+      </if>
+      <if test="rcommentContent != null">
+        rcomment_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="rcommentId != null">
+        #{rcommentId,jdbcType=INTEGER},
+      </if>
+      <if test="reviewId != null">
+        #{reviewId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="rcommentTime != null">
+        #{rcommentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rcommentContent != null">
+        #{rcommentContent,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.smile.amazon.model.ReviewComment">
+    update review_comment
+    <set>
+      <if test="reviewId != null">
+        review_id = #{reviewId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="rcommentTime != null">
+        rcomment_time = #{rcommentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rcommentContent != null">
+        rcomment_content = #{rcommentContent,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where rcomment_id = #{rcommentId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.smile.amazon.model.ReviewComment">
+    update review_comment
+    set review_id = #{reviewId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      rcomment_time = #{rcommentTime,jdbcType=TIMESTAMP},
+      rcomment_content = #{rcommentContent,jdbcType=VARCHAR}
+    where rcomment_id = #{rcommentId,jdbcType=INTEGER}
+  </update>
+</mapper>

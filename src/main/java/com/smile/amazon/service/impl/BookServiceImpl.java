@@ -4,10 +4,12 @@ import com.smile.amazon.dto.BookDetailDTO;
 import com.smile.amazon.dto.BookReviewDTO;
 import com.smile.amazon.mapper.BookMapper;
 import com.smile.amazon.mapper.CommentMapper;
+import com.smile.amazon.mapper.ReviewCommentMapper;
 import com.smile.amazon.mapper.ReviewMapper;
 import com.smile.amazon.model.Book;
 import com.smile.amazon.model.Comment;
 import com.smile.amazon.model.Review;
+import com.smile.amazon.model.ReviewComment;
 import com.smile.amazon.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,9 @@ public class BookServiceImpl implements BookService {
 
     @Autowired
     private CommentMapper commentMapper;
+
+    @Autowired
+    private ReviewCommentMapper reviewCommentMapper;
 
     @Override
     public List<Book> bookList() {
@@ -52,7 +57,12 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public BookReviewDTO bookReviewDTO(Integer bookId) {
-        return bookMapper.bookReviewDTO(bookId);
+    public int insertReviewComment(ReviewComment reviewComment) {
+        return reviewCommentMapper.insert(reviewComment);
+    }
+
+    @Override
+    public BookReviewDTO bookReviewDTO(Integer reviewId) {
+        return bookMapper.bookReviewDTO(reviewId);
     }
 }

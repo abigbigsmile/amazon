@@ -57,7 +57,7 @@ public class BookMapperTest {
 
     @Test
     public void testBookReviewDTO(){
-        BookReviewDTO bookReviewDTO = bookMapper.bookReviewDTO(1);
+        BookReviewDTO bookReviewDTO = bookMapper.bookReviewDTO(9);
         System.out.println();
     }
 
@@ -66,5 +66,6 @@ public class BookMapperTest {
         Comment comment = commentMapper.selectByPrimaryKey(11);
         System.out.println();
     }
+
 
 }

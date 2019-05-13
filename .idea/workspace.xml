@@ -7,82 +7,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34e09be7-d379-4ea6-9be8-4a41c571e249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/CommentQueryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/41810ec613d43cc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/_all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/bundle(1).css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/bundle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/douban.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/init.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/report_dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/setting_standalone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/ReviewMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/ReviewCommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/model/ReviewComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/ReviewCommentQueryVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ReviewCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/distpicker.data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/distpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/mapper/ReviewCommentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/model/ReviewComment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/queryVO/ReviewCommentQueryVO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/ReviewCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/static/js/distpicker.data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/static/js/distpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/amazon/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/mapper/ReviewCommentMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/model/ReviewComment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/queryVO/ReviewCommentQueryVO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ReviewCommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookDetailDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/generator/mapper/BookMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/generator/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/generator/model/BookWithBLOBs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/CommentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/ReviewMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/model/Comment.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/CommentService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/CommentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smile/amazon/generator/mapper/BookMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_shoppingcart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/购物车-当当网.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/购物车-当当网.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/META-INF/amazon.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/dto/BookDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/dto/BookDetailDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/generator/mapper/BookMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/generator/mapper/BookMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/generator/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/generator/model/BookWithBLOBs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/mapper/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/mapper/BookMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/mapper/ReviewMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/mapper/ReviewMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/model/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/dto/BookReviewDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/dto/BookReviewDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/CommentService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/com/smile/amazon/service/impl/CommentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/config/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/config/spring/applicationContext-dao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/CommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/ReviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/classes/mapper/ReviewMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_review_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_review_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_review_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_review_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/WEB-INF/views/index/book_shoppingcart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazon/购物车-当当网.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazon/购物车-当当网.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/amazon.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/dto/BookDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/dto/BookDetailDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/generator/mapper/BookMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/generator/mapper/BookMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/generator/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/generator/model/BookWithBLOBs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/mapper/BookMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/mapper/BookMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/mapper/ReviewMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/mapper/ReviewMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/model/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/dto/BookReviewDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/dto/BookReviewDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/CommentService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/impl/BookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smile/amazon/service/impl/CommentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-dao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ReviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ReviewMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/smile/amazon/mapper/BookMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/smile/amazon/mapper/BookMapperTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -116,50 +91,7 @@
     <favorites_list name="amazon" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="368" column="10" lean-forward="true" selection-start-line="368" selection-start-column="10" selection-end-line="368" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="46" />
-              <folding>
-                <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-              <folding>
-                <element signature="method#book_list#0;class#BookController#0" />
-                <element signature="n#!!block;n#book_shoppingcart#0;n#BookController#0" />
-                <element signature="method#book_review_edit#0;class#BookController#0" />
-                <element signature="e#2080#2081#0" expanded="true" />
-                <element signature="e#2104#2105#0" expanded="true" />
-                <element signature="method#uploadArticleImg#0;class#BookController#0" />
-                <element signature="method#uploadFile#0;class#BookController#0" />
-                <element signature="method#book_review_insert#0;class#BookController#0" />
-                <element signature="n#!!block;n#book_review#0;n#BookController#0" />
-                <element signature="method#book_comment_insert#0;class#BookController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -174,39 +106,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>id=&quot;editor&quot;</find>
-      <find>下一</find>
-      <find>标题</find>
-      <find>《三体》</find>
-      <find>./对奇洛的感想（哈利·波特与魔法石）书评_files/</find>
-      <find>./对奇洛的感</find>
-      <find>书评_files</find>
-      <find>./三体</find>
-      <find>./三体 (豆瓣)_files/</find>
-      <find>.css</find>
-      <find>w960</find>
-      <find>./</find>
-      <find>./购物车-当当网_files/</find>
-      <find>close-reveal-modal</find>
-      <find>书评</find>
-      <find>给</find>
-      <find>我要</find>
       <find>selectCommentQueryVO</find>
       <find>BookDetailResultMap</find>
       <find>BookReviewResultMap</find>
       <find>comment-list-wrapper</find>
       <find>全部</find>
       <find>book_review</find>
-      <find>com.smile.amazon.generator</find>
       <find>com.smile.amazon.generator.</find>
       <find>comment</find>
       <find>com.smile.amazon.generator.model.Comment</find>
-      <find>main-bd</find>
       <find>./对奇洛</find>
       <find>./对奇洛的感想（哈利·波特与魔法石）书评_files</find>
+      <find>main-bd</find>
+      <find>css</find>
+      <find>img</find>
+      <find>book_review_</find>
+      <find>class=&quot;article</find>
+      <find>com.smile.amazon.generator</find>
+      <find>com.smile.amazon.generato</find>
+      <find>转发</find>
+      <find>加上去</find>
+      <find>op-lnks</find>
+      <find>pattern</find>
+      <find>comment-item</find>
+      <find>findReviewQueryVO</find>
+      <find>购书单</find>
+      <find>./购物车-当当网_files</find>
+      <find>js</find>
+      <find>shopping_procedure</find>
+      <find>购物车</find>
+      <find>id=&quot;district&quot;</find>
     </findStrings>
     <replaceStrings>
-      <replace>img</replace>
       <replace>css</replace>
       <replace>/css/</replace>
       <replace>css/forala_editor/</replace>
@@ -215,6 +146,7 @@
       <replace>css/</replace>
       <replace>com.smile.amazon.model.Comment</replace>
       <replace>css/book_review_detail</replace>
+      <replace>img</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -223,8 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/TestMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/generator/mybatisGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/TestMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
@@ -243,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/temp.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/购物车-当当网.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_shoppingcart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/reveal.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/modelExpansion/CommentExpansion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/CommentService.java" />
@@ -252,28 +181,31 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/CommentVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/TestBookReview.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/TestVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/ReviewMapper.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/ReviewMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/ReviewQueryVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookDetailDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/CommentQueryVO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/model/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ReviewCommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/ReviewCommentQueryVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_shoppingcart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java" />
       </list>
     </option>
   </component>
@@ -314,8 +246,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="750" />
-    <option name="y" value="104" />
+    <option name="x" value="584" />
+    <option name="y" value="88" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -365,9 +297,48 @@
               <item name="amazon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazon" type="b2602c69:ProjectViewProjectNode" />
               <item name="amazon" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="amazon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="amazon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,7 +351,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557671517563" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557737210337" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -413,11 +384,11 @@
       <recent name="com.smile.amazon.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAworkspace\amazon\src\main\webapp\static\js" />
       <recent name="D:\IDEAworkspace\amazon\src\main\webapp\static\img" />
       <recent name="D:\IDEAworkspace\amazon\src\main\webapp\static\css\book_review_detail" />
       <recent name="D:\IDEAworkspace\amazon\src\main\webapp\WEB-INF\views\index" />
       <recent name="D:\IDEAworkspace\amazon\src\main\resources\config" />
-      <recent name="D:\IDEAworkspace\amazon\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -588,9 +559,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookMapperTest.testBookReviewDTO" />
         <item itemvalue="JUnit.BookMapperTest.testBookComment" />
         <item itemvalue="JUnit.BookMapperTest.testBookDetailDTO" />
-        <item itemvalue="JUnit.BookMapperTest.testBookReviewDTO" />
         <item itemvalue="JUnit.ReviewMapperTest.testBookReview" />
         <item itemvalue="JUnit.ReviewMapperTest.testSelectReview" />
       </list>
@@ -622,23 +593,16 @@
       <workItem from="1557622396268" duration="10868000" />
       <workItem from="1557642929738" duration="11268000" />
       <workItem from="1557654338813" duration="865000" />
-      <workItem from="1557670380664" duration="1069000" />
+      <workItem from="1557670380664" duration="1747000" />
+      <workItem from="1557710611006" duration="7925000" />
+      <workItem from="1557718630951" duration="85000" />
+      <workItem from="1557719062258" duration="24000" />
+      <workItem from="1557721017665" duration="3547000" />
+      <workItem from="1557732800050" duration="2956000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookMapperTest_testBookComment - 2019.05.12 at 17h 34m 51s.xml">
-      <configuration name="BookMapperTest.testBookComment" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookMapperTest_testBookComment - 2019.05.12 at 17h 35m 31s.xml">
-      <configuration name="BookMapperTest.testBookComment" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookMapperTest_testBookComment - 2019.05.12 at 17h 36m 14s.xml">
-      <configuration name="BookMapperTest.testBookComment" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.12 at 17h 36m 49s.xml">
-      <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.12 at 17h 41m 02s.xml">
       <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
     </history-entry>
@@ -657,15 +621,26 @@
     <history-entry file="BookMapperTest_testBookComment - 2019.05.12 at 17h 53m 56s.xml">
       <configuration name="BookMapperTest.testBookComment" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.13 at 09h 50m 50s.xml">
+      <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.13 at 10h 59m 44s.xml">
+      <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.13 at 11h 18m 08s.xml">
+      <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookMapperTest_testBookReviewDTO - 2019.05.13 at 11h 20m 50s.xml">
+      <configuration name="BookMapperTest.testBookReviewDTO" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142290000" />
+    <option name="totallyTimeSpent" value="157505000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7547893" visible="true" weight="0.17270789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7547893" visible="true" weight="0.23667377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -675,8 +650,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45010847" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" visible="true" weight="0.23101953" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2505423" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" visible="true" weight="0.20390455" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -685,16 +660,16 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5063966" side_tool="true" weight="0.4978308" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4936034" weight="0.19522777" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4936034" weight="0.22234273" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -741,50 +716,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../springmvc_demo/src/main/resources/mapper/userMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/springmvc-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/TestVO.java" />
     <entry file="file://$PROJECT_DIR$/../springmvc_demo/src/main/resources/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -979,59 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#sql#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#0;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#1;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#2;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#3;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#4;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#5;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#6;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#7;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#0;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#1;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#2;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#3;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#4;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#5;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#6;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#7;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#0;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#1;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#2;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#3;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#4;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#5;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#6;n#set#0;n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1057,27 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/CommentQueryVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookDetailDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1137,10 +998,208 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="70" lean-forward="true" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/setting_standalone.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/CommentQueryVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="55" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#4;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#5;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#6;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#7;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#4;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#5;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#6;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#7;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#4;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#5;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#6;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/BookMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/service/impl/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/ReviewCommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/queryVO/ReviewCommentQueryVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/dto/BookReviewDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="method#setReviewCommentList#0;class#BookReviewDTO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/model/ReviewComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="method#testSave#0;class#BookMapperTest#0" />
+            <element signature="method#testBookList#0;class#BookMapperTest#0" />
+            <element signature="method#testBookDetailDTO#0;class#BookMapperTest#0" />
+            <element signature="method#testBookReviewDTO#0;class#BookMapperTest#0" />
+            <element signature="method#testBookComment#0;class#BookMapperTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReviewCommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#sql#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#4;n#trim#0;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#4;n#trim#1;n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#1;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#2;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#3;n#set#0;n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/distpicker.data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        <state relative-caret-position="502">
+          <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
           <folding>
             <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
             <element signature="n#sql#0;n#mapper#0;n#!!top" />
@@ -1189,79 +1248,20 @@
             <element signature="n#if#10;n#set#0;n#update#0;n#mapper#0;n#!!top" />
             <element signature="n#update#1;n#mapper#0;n#!!top" />
             <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#resultMap#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
             <element signature="n#resultMap#3;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/mapper/CommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/model/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="70" lean-forward="true" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/smile/amazon/mapper/BookMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding>
-            <element signature="method#testSave#0;class#BookMapperTest#0" />
-            <element signature="method#testBookList#0;class#BookMapperTest#0" />
-            <element signature="method#testBookReviewDTO#0;class#BookMapperTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/book_review_detail/setting_standalone.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-          <folding>
-            <element signature="method#book_list#0;class#BookController#0" />
-            <element signature="n#!!block;n#book_shoppingcart#0;n#BookController#0" />
-            <element signature="method#book_review_edit#0;class#BookController#0" />
-            <element signature="e#2080#2081#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
-            <element signature="method#uploadArticleImg#0;class#BookController#0" />
-            <element signature="method#uploadFile#0;class#BookController#0" />
-            <element signature="method#book_review_insert#0;class#BookController#0" />
-            <element signature="n#!!block;n#book_review#0;n#BookController#0" />
-            <element signature="method#book_comment_insert#0;class#BookController#0" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#6;n#mapper#0;n#!!top" />
+            <element signature="n#resultMap#5;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="46" />
+        <state relative-caret-position="1176">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
           <folding>
             <element signature="n#c:forEach#0;n#jsp:root#0;n#!!top" />
           </folding>
@@ -1270,8 +1270,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_review_detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="368" column="10" lean-forward="true" selection-start-line="368" selection-start-column="10" selection-end-line="368" selection-end-column="10" />
+        <state relative-caret-position="-2490">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smile/amazon/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="method#book_list#0;class#BookController#0" />
+            <element signature="method#book_detail#0;class#BookController#0" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="method#book_review_edit#0;class#BookController#0" />
+            <element signature="method#uploadArticleImg#0;class#BookController#0" />
+            <element signature="method#uploadFile#0;class#BookController#0" />
+            <element signature="method#book_review_insert#0;class#BookController#0" />
+            <element signature="n#!!block;n#book_review#0;n#BookController#0" />
+            <element signature="method#book_comment_insert#0;class#BookController#0" />
+            <element signature="method#review_comment_insert#0;class#BookController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/book_shoppingcart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
         </state>
       </provider>
     </entry>
