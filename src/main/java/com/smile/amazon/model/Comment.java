@@ -1,10 +1,7 @@
 package com.smile.amazon.model;
 
-import org.springframework.stereotype.Repository;
-
 import java.util.Date;
 
-@Repository
 public class Comment {
     private Integer commentId;
 

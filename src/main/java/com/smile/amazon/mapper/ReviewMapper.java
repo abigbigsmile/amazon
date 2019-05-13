@@ -1,5 +1,6 @@
 package com.smile.amazon.mapper;
 
+import com.smile.amazon.dto.TestBookReview;
 import com.smile.amazon.model.Review;
 
 public interface ReviewMapper {
@@ -14,4 +15,6 @@ public interface ReviewMapper {
     int updateByPrimaryKeySelective(Review record);
 
     int updateByPrimaryKey(Review record);
+
+    TestBookReview getBookReview(int bookId);
 }

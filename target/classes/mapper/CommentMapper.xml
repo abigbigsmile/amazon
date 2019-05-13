@@ -5,7 +5,7 @@
     <id column="comment_id" jdbcType="INTEGER" property="commentId" />
     <result column="book_id" jdbcType="INTEGER" property="bookId" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="comment_time" jdbcType="DATE" property="commentTime" />
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
     <result column="love" jdbcType="TINYINT" property="love" />
     <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
   </resultMap>
@@ -27,7 +27,7 @@
       comment_time, love, comment_content
       )
     values (#{commentId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
-      #{commentTime,jdbcType=DATE}, #{love,jdbcType=TINYINT}, #{commentContent,jdbcType=VARCHAR}
+      #{commentTime,jdbcType=TIMESTAMP}, #{love,jdbcType=TINYINT}, #{commentContent,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.smile.amazon.model.Comment">
@@ -63,7 +63,7 @@
         #{userId,jdbcType=INTEGER},
       </if>
       <if test="commentTime != null">
-        #{commentTime,jdbcType=DATE},
+        #{commentTime,jdbcType=TIMESTAMP},
       </if>
       <if test="love != null">
         #{love,jdbcType=TINYINT},
@@ -83,7 +83,7 @@
         user_id = #{userId,jdbcType=INTEGER},
       </if>
       <if test="commentTime != null">
-        comment_time = #{commentTime,jdbcType=DATE},
+        comment_time = #{commentTime,jdbcType=TIMESTAMP},
       </if>
       <if test="love != null">
         love = #{love,jdbcType=TINYINT},
@@ -98,7 +98,7 @@
     update comment
     set book_id = #{bookId,jdbcType=INTEGER},
       user_id = #{userId,jdbcType=INTEGER},
-      comment_time = #{commentTime,jdbcType=DATE},
+      comment_time = #{commentTime,jdbcType=TIMESTAMP},
       love = #{love,jdbcType=TINYINT},
       comment_content = #{commentContent,jdbcType=VARCHAR}
     where comment_id = #{commentId,jdbcType=INTEGER}

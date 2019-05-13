@@ -1,7 +1,10 @@
 package com.smile.amazon.mapper;
 
 import com.smile.amazon.dto.BookDetailDTO;
+import com.smile.amazon.dto.BookReviewDTO;
 import com.smile.amazon.model.Book;
+import com.smile.amazon.model.Comment;
+import com.smile.amazon.queryVO.CommentQueryVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,9 @@ public class BookMapperTest {
 
     @Autowired
     private BookMapper bookMapper;
+
+    @Autowired
+    private CommentMapper commentMapper;
 
     @Test
     public void testSave(){
@@ -46,6 +52,18 @@ public class BookMapperTest {
     @Test
     public void testBookDetailDTO(){
         BookDetailDTO bookDetailDTO = bookMapper.bookDetailDTO(1);
+        System.out.println();
+    }
+
+    @Test
+    public void testBookReviewDTO(){
+        BookReviewDTO bookReviewDTO = bookMapper.bookReviewDTO(1);
+        System.out.println();
+    }
+
+    @Test
+    public void testBookComment(){
+        Comment comment = commentMapper.selectByPrimaryKey(11);
         System.out.println();
     }
 
